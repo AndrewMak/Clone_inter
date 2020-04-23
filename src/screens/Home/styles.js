@@ -16,7 +16,7 @@ export const CardContainer = styled.View`
     flex-direction: row;
     flex-wrap: wrap;
     border-bottom-color: #ccc;
-    border-bottom-width: 1
+    border-bottom-width: 1;
 `
 
 export const Card = styled.TouchableOpacity`
@@ -44,3 +44,6 @@ font-size:12px;
 width: 100%;
 text-align: center;
   `
+export const ContainerHelp = styled.View`
+  width:100%;
+`

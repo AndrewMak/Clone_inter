@@ -1,5 +1,5 @@
 import React from 'react'
-import { Wrapper, Container, CardContainer, Card, CardImg, CardText } from './styles'
+import { Wrapper, Container, CardContainer, Card, CardImg, CardText, ContainerHelp } from './styles'
 import Banner from '../../components/Banner'
 import BannerSuggestion from '../../components/BannerSuggestion'
 import CardNavigation from '../../components/CardNavigation'
@@ -101,6 +101,13 @@ export default function Home() {
             <CardText>Moda</CardText>
           </Card>           
         </CardContainer>
+        <ContainerHelp>
+        <Text>Central de ajuda</Text>
+        <BannerSuggestion title='' description='Oi, Andrew Posso Ajudar?'></BannerSuggestion>
+        <BannerSuggestion title='I-Safe' description=''></BannerSuggestion>
+
+
+        </ContainerHelp>
       </Container>
     </Wrapper>
   );
