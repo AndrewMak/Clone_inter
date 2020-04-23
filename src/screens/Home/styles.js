@@ -124,6 +124,7 @@ export const CardNavigationContainer  = styled.ScrollView.attrs(() => ({
 }))`
   background: #eeeff3;
   height: 280px;
+
 `;
 
 export const CardNavigation = styled.TouchableOpacity`
@@ -134,6 +135,7 @@ export const CardNavigation = styled.TouchableOpacity`
   align-items: center;
   border-radius: 10px;
   padding: 16px;
+  elevation: 5;
 `;
 
 export const CardNavigationImg = styled.Image``;
@@ -157,6 +159,7 @@ export const CardNavigationHeaderText = styled.Text`
 
 export const CardNavigationDetail = styled.View`
   width:45%;
+  height:90%;
   flex-direction:row;
   align-items: center;
   justify-content:center;

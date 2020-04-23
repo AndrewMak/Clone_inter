@@ -6,8 +6,9 @@ export const Container = styled.View`
   flex-direction: row;
   align-items: center;
   padding-left: 15px;
-  padding-right:25px;
-  margin-top: -40px;  
+  padding-right:25px;  
+  margin: 25px 16px;
+  border-radius: 8px;
   padding-bottom: 25px;
   padding-top: 25px;
 `;
@@ -19,9 +20,10 @@ export const Details = styled.View`
 `;
 
 export const Title = styled.Text`
-  color: #fc6e06;
-  font-size: 16px;
+  color: #6a6c80;
+  font-size: 20px;
   font-weight: bold;
+  margin-bottom:5px;
 `;
 
 export const Description = styled.Text`

@@ -8,6 +8,7 @@ import {
   CardCollapse, CardNavigation, CardNavigationImg, CardNavigationHeader, CardNavigationHeaderText, CardNavigationDetail
 } from './styles'
 import Banner from '../../components/Banner'
+import BannerShopping from '../../components/BannerShopping'
 import icone from '../../images/icone.png';
 
 export default function Home() {
@@ -37,15 +38,15 @@ export default function Home() {
     {
       key: String(Math.random()),
       icon: 'text-document',
-      title: 'Extrato',
-      description: '',
+      title: 'Mastercard XXXX',
+      description: 'As Informações estão ocultas para garantir sua privacidade, para habilitá-las, basta clicar no olho acima',
       img: icone
     },
     {
       key: String(Math.random()),
       icon: 'text-document',
-      title: 'Extrato',
-      description: '',
+      title: 'Investimentos',
+      description: 'As Informações estão ocultas para garantir sua privacidade, para habilitá-las, basta clicar no olho acima',
       img: icone
     }
   ];
@@ -66,7 +67,7 @@ export default function Home() {
             <Card><ImgCard><Entypo name="add-to-list" size={25} color="#fc6e06" /></ImgCard><TextCard>Investimentos</TextCard></Card>
             <CardCollapse show={!isShow}><AntDesign.Button name="down" onPress={() => handleCollapse()} size={25} color="#fc6e06" style={{
               alignItems: 'center',
-              justifyContent: 'center', backgroundColor: '#fcfcfe'
+              justifyContent: 'center', backgroundColor: '#faf9fe'
             }} /></CardCollapse>
           </ContainerCard>
           <ContainerCollapse show={isShow} style={[
@@ -95,7 +96,7 @@ export default function Home() {
             <CardCollapse show={isShow}>
               <AntDesign.Button name="up" onPress={() => handleCollapse()} size={25} color="#fc6e06" style={{
                 alignItems: 'center',
-                justifyContent: 'center', backgroundColor: '#fcfcfe'
+                justifyContent: 'center', backgroundColor: '#faf9fe'
               }} />
             </CardCollapse>
           </ContainerCollapse>
@@ -103,19 +104,29 @@ export default function Home() {
         <Banner></Banner>
         <CardNavigationContainer>
           {items.map((item) => (
-            <CardNavigation key={item.key}>
+            <CardNavigation style={{
+              shadowColor: "#000",
+              shadowOffset: {
+                width: 0,
+                height: 2,
+              },
+              shadowOpacity: 0.23,
+              shadowRadius: 2.62,              
+              elevation: 4,
+            }} key={item.key}>
               <CardNavigationHeader>
                 <Entypo name={item.icon} size={25} color="#fc6e06" />
-                <CardNavigationHeaderText style={{ flex: '1' }}>{item.title}</CardNavigationHeaderText>
+                <CardNavigationHeaderText style={{ flex: 1 }}>{item.title}</CardNavigationHeaderText>
                 <MaterialCommunityIcons name='eye-off-outline' size={20} color="#fc6e06" />
               </CardNavigationHeader>
               <CardNavigationDetail>
                 <CardNavigationImg source={item.img}></CardNavigationImg>
-                <Text>{item.description}</Text>
+                <Text style={{ color: '#76757d' }}>{item.description}</Text>
               </CardNavigationDetail>
             </CardNavigation>
           ))}
         </CardNavigationContainer>
+        <BannerShopping></BannerShopping>
       </Container>
     </Wrapper>
   );

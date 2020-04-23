@@ -14,7 +14,7 @@ export default function Banner() {
           Compre Gift Cards de Uber Easts aqui e ganhe 4% de cashback. Vem!
         </Description>
       </Details>
-      <EvilIcons name="close" size={40} color="#000" style={{  justifyContent: 'center', alignItems: 'center'}} />
+      <EvilIcons name="close" size={35} color="#000" style={{  justifyContent: 'center', alignItems: 'center'}} />
     </Container>
   );
 }
