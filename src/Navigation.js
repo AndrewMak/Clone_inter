@@ -6,6 +6,7 @@ import { AntDesign, Ionicons } from '@expo/vector-icons';
 import HomeScreen from './screens/Home';
 import WalletScreen from './screens/Wallet';
 import PayScreen from './screens/Pay';
+import SplashScreen from './screens/Splash';
 
 const Stack = createStackNavigator();
 export default function Navigation() {
@@ -14,6 +15,7 @@ export default function Navigation() {
         screenOptions={{
           headerShown: false,
         }}>
+        <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="WalletScreen" component={WalletScreen} />
         <Stack.Screen name="PayScreen" component={PayScreen} />
