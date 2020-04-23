@@ -27,7 +27,7 @@ export const ContainerCollapse = styled(Animated.View)`
     flex-direction: row;
     flex-wrap: wrap;
 `
-export const Card = styled.View`
+export const Card = styled.TouchableOpacity`
   flex: 0 0 auto;
   align-items: center;
   background-color: #fff;
