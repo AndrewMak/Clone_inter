@@ -20,7 +20,7 @@ export default function CardNavigation({ data }) {
                 }} key={item.key}>
                     <Header>
                         <Entypo name={item.icon} size={25} color="#fc6e06" />
-                        <HeaderText style={{ flex: 1 }}>{item.title}</HeaderText>
+                        <HeaderText>{item.title}</HeaderText>
                         <MaterialCommunityIcons name='eye-off-outline' size={20} color="#fc6e06" />
                     </Header>
                     <Detail>
