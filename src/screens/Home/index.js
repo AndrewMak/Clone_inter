@@ -60,51 +60,51 @@ export default function Home() {
               <MaterialCommunityIcons name="cellphone" size={60} color="#fc6e06" />
             </CardImg>
             <CardText>Tecnologia</CardText>
-          </Card>  
+          </Card>
 
           <Card>
             <CardImg>
               <MaterialCommunityIcons name="bus-school" size={60} color="#fc6e06" />
             </CardImg>
             <CardText>Transporte</CardText>
-          </Card>    
+          </Card>
 
           <Card>
             <CardImg>
               <MaterialCommunityIcons name="basketball" size={60} color="#fc6e06" />
             </CardImg>
             <CardText>Esporte</CardText>
-          </Card>   
+          </Card>
 
           <Card>
             <CardImg>
               <MaterialCommunityIcons name="airplane-takeoff" size={60} color="#fc6e06" />
             </CardImg>
             <CardText>Viagem</CardText>
-          </Card>    
+          </Card>
           <Card>
             <CardImg>
               <FontAwesome name="heartbeat" size={60} color="#fc6e06" />
             </CardImg>
             <CardText>Saúde</CardText>
-          </Card>    
+          </Card>
           <Card>
             <CardImg>
               <MaterialCommunityIcons name="text-short" size={60} color="#fc6e06" />
             </CardImg>
             <CardText>Beleza</CardText>
-          </Card>    
+          </Card>
           <Card>
             <CardImg>
               <Ionicons name="ios-shirt" size={60} color="#fc6e06" />
             </CardImg>
             <CardText>Moda</CardText>
-          </Card>           
+          </Card>
         </CardContainer>
         <ContainerHelp>
-        <Text>Central de ajuda</Text>
-        <BannerSuggestion title='' description='Oi, Andrew Posso Ajudar?'></BannerSuggestion>
-        <BannerSuggestion title='I-Safe' description=''></BannerSuggestion>
+          <Text>Central de ajuda</Text>
+          <BannerSuggestion title='' description='Oi, Andrew Posso Ajudar?'></BannerSuggestion>
+          <BannerSuggestion title='I-Safe' description=''></BannerSuggestion>
 
 
         </ContainerHelp>

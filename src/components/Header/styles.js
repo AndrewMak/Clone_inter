@@ -8,6 +8,25 @@ export const Container = styled.View`
   justify-content: space-between;
   background: #fc6e06;
 `;
+export const ContainerBalance = styled.ScrollView.attrs(() => ({
+  horizontal: true,
+  decelerationRate: 0,
+  snapToInterval: 90,
+  snapToAlignment: 'center',
+  contentContainerStyle: {
+    alignItems: 'flex-start',
+    paddingLeft: 0,
+  },
+}))`
+  width: 180px;
+`;
+export const Wrapper = styled.View`
+    width: 150px;
+    margin-right: 30px;
+    align-items: center;
+    flex-direction: row;
+`;
+
 
 export const Detail = styled.View``;
 
@@ -30,7 +49,12 @@ export const Eye = styled.TouchableOpacity`
   width: 25px;
   height: 25px;
   background: transparent;
-  margin-left: -100px;
+  flex: 1 0 auto;
+  margin-left: 5px;
+  margin-right: 10px;
+
+  align-items:center;
+  justify-content: center;
 `
 export const Photo = styled.View`
   width: 50px;
