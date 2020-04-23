@@ -4,17 +4,20 @@ import { MaterialCommunityIcons, AntDesign, Entypo, Feather, FontAwesome5 } from
 import { Text, Animated, View } from 'react-native'
 import {
   Wrapper, Container, Header, BalanceContainer, BalanceTitle,
-  Balance, Photo, PhotoText, ContainerCard, Card, ImgCard, TextCard, ContainerCollapse, CardNavigationContainer, WrapperCard,
-  CardCollapse, CardNavigation, CardNavigationImg, CardNavigationHeader, CardNavigationHeaderText, CardNavigationDetail
+  Balance, Photo, PhotoText, ContainerCard, Card, ImgCard, TextCard, ContainerCollapse, WrapperCard,
+  CardCollapse,
+  Eye
 } from './styles'
 import Banner from '../../components/Banner'
-import BannerShopping from '../../components/BannerShopping'
+import BannerSuggestion from '../../components/BannerSuggestion'
+import CardNavigation from '../../components/CardNavigation'
+
 import icone from '../../images/icone.png';
 
 export default function Home() {
   const [isShow, setShow] = useState(false)
   const [opacity, setOpacity] = useState(new Animated.Value(0))
-
+  const [iconEye, seticonEye] = useState(false)
   useEffect(() => {
     Animated.timing(opacity, {
       toValue: 1,
@@ -56,8 +59,10 @@ export default function Home() {
         <Header>
           <BalanceContainer>
             <BalanceTitle>Saldo em Conta</BalanceTitle>
-            <Balance>R$ 100.000,00</Balance>
+            <Balance show={iconEye}>R$ 100.000,00</Balance>        
           </BalanceContainer>
+          <Eye><View style={{width: 15, height: 15,}}></View><MaterialCommunityIcons name={iconEye ? 'eye-outline': 'eye-off-outline'} size={20} color="#fff" onPress={()=> seticonEye(!iconEye)} /></Eye>
+          
           <Photo><PhotoText>AC</PhotoText></Photo>
         </Header>
         <WrapperCard>
@@ -102,31 +107,8 @@ export default function Home() {
           </ContainerCollapse>
         </WrapperCard>
         <Banner></Banner>
-        <CardNavigationContainer>
-          {items.map((item) => (
-            <CardNavigation style={{
-              shadowColor: "#000",
-              shadowOffset: {
-                width: 0,
-                height: 2,
-              },
-              shadowOpacity: 0.23,
-              shadowRadius: 2.62,              
-              elevation: 4,
-            }} key={item.key}>
-              <CardNavigationHeader>
-                <Entypo name={item.icon} size={25} color="#fc6e06" />
-                <CardNavigationHeaderText style={{ flex: 1 }}>{item.title}</CardNavigationHeaderText>
-                <MaterialCommunityIcons name='eye-off-outline' size={20} color="#fc6e06" />
-              </CardNavigationHeader>
-              <CardNavigationDetail>
-                <CardNavigationImg source={item.img}></CardNavigationImg>
-                <Text style={{ color: '#76757d' }}>{item.description}</Text>
-              </CardNavigationDetail>
-            </CardNavigation>
-          ))}
-        </CardNavigationContainer>
-        <BannerShopping></BannerShopping>
+       <CardNavigation data={items}></CardNavigation>
+        <BannerSuggestion title='Shopping' description='Aproveite todos os produtos'></BannerSuggestion>
       </Container>
     </Wrapper>
   );

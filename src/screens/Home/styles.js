@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { Animated } from 'react-native'
+import { Animated, TouchableOpacity } from 'react-native'
 export const Wrapper = styled.SafeAreaView`
   background: #f4f5f9;
   flex: 1;
@@ -26,10 +26,19 @@ export const BalanceTitle = styled.Text`
 
 export const Balance = styled.Text`
   color: rgba(255, 255, 255, 0.8);
+  ${({ show }) => !show && `
+     color: #ff8a47;      
+     background: #ff8a47
+  `}
   text-align: left;
   font-size: 20px;
 `;
-
+export const Eye = styled(TouchableOpacity)`
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  margin-left: -100px;
+`
 export const Photo = styled.View`
   width: 50px;
   height: 50px;
@@ -110,57 +119,3 @@ export const CardCollapse = styled.View`
   
 `
 
-
-export const CardNavigationContainer  = styled.ScrollView.attrs(() => ({
-  horizontal: true,
-  showsHorizontalScrollIndicator: false,
-  decelerationRate: 0,
-  snapToInterval:  240,
-  snapToAlignment: 'center',
-  contentContainerStyle: {
-    alignItems: 'center',
-    paddingLeft: 10,
-  },
-}))`
-  background: #eeeff3;
-  height: 280px;
-
-`;
-
-export const CardNavigation = styled.TouchableOpacity`
-  width: 300px;
-  height: 230px;
-  margin-right: 16px;
-  background:#fff;
-  align-items: center;
-  border-radius: 10px;
-  padding: 16px;
-  elevation: 5;
-`;
-
-export const CardNavigationImg = styled.Image``;
-
-export const Label = styled.Text`
-  color: #fff;
-  font-weight: bold;
-  margin-top: 8px;
-  font-size: 14px;
-`;
-
-export const CardNavigationHeader = styled.View`
-  flex-direction: row;
-  align-items: center;
-  
-`
-
-export const CardNavigationHeaderText = styled.Text`
-  flex: 1;
-`
-
-export const CardNavigationDetail = styled.View`
-  width:45%;
-  height:90%;
-  flex-direction:row;
-  align-items: center;
-  justify-content:center;
-`
